@@ -90,7 +90,7 @@ async function getClusterConfig(env: string, region: string) {
 
 // Function to map version string to KubernetesVersion enum
 
-function getKubernetesVersion(version: string): KubernetesVersion {
+export function getKubernetesVersion(version: string): KubernetesVersion {
   switch (version) {
     case "1.33":
       return KubernetesVersion.V1_33;
