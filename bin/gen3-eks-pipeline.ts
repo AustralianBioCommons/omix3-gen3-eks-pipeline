@@ -26,7 +26,7 @@ if (usePipeline) {
     project: "OMIX3",
   };
   console.log(`🚀 Deploying EKS with CI/CD Pipeline...`);
-  new Gen3EksPipelineStack().buildAsync(app, `Gen3-Eks-Pipeline-omix3`, props);
+  new Gen3EksPipelineStack().buildAsync(app, `Gen3-Eks-pipeline`, props);
 } else {
   // Get environment from context or default to "uat"
   const envName = app.node.tryGetContext("envName") || "uat";

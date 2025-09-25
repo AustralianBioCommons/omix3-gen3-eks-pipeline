@@ -134,10 +134,10 @@ export class Gen3EksPipelineStack extends cdk.Stack {
     // Add stages dynamically
     for (const { id, env, teams, externalSecret, addons } of stages) {
 
-      new ssm.StringParameter(this, `${env.name}-gen3Hostname`, {
-        parameterName: `/gen3/${env.project || env.name} /${env.name}/hostname`,
-        stringValue: env.hostname || 'gen3 hostname',
-      });
+      // new ssm.StringParameter(this, `${env.name}-gen3Hostname`, {
+      //   parameterName: `/gen3/${env.project || env.name} /${env.name}/hostname`,
+      //   stringValue: env.hostname || 'gen3 hostname',
+      // });
 
       const issuerAddon = new OidcIssuerAddOn(
         env.namespace,
